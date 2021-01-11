@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html manifest="cache.manifest">
+<head>
+<title>Prb 7.02 Auto Test</title>
+<link rel="stylesheet" href="css/index.css">
+<script>
+function DLProgress(e){Percent=(Math.round(e.loaded / e.total * 100));window.msgs.innerHTML="Installing Offline Cache: " + Percent + "%";}
+function DisplayCacheProgress(){setTimeout(function(){window.msgs.innerHTML="Cache Installed Successfully";},1000);setTimeout(function(){window.msgs.innerHTML="Now Close And Re-Open Your Browser";},3000);}window.applicationCache.addEventListener("progress",DLProgress,false);window.applicationCache.oncached=function(e){DisplayCacheProgress();};window.applicationCache.onupdateready=function(e){DisplayCacheProgress();};
+</script>
+</head>
+<body onload="returning(); Check();" style="text-align:center">
+<h1 id=msgs style='font-size:38px;color:white;text-shadow: 4px 4px 4px blue;'>Prb 7.02</h1>
+
+
+<h1 style='margin-bottom:380px;'></h1>
+<button id="Auto Hen" class="button" onmouseover="description('Auto Hen')" onMouseOut="back()"><input type="checkbox" id="auto" onclick="check() "></button>
+<button id="hen1" class="button" onmouseover="description('hen213')" onMouseOut="back()"><img src="css/hen.png" onclick="load_exploit_HEN(); return false"></button>
+<button id="hen2" class="button" onmouseover="description('Mira')" onMouseOut="back()"><img src="css/mira.png" onclick="load_exploit_mira2(); return false"></button>
+<button id="hen3" class="button" onmouseover="description('Mira+hen')" onMouseOut="back()"><img src="css/mira.png" onclick="load_exploit_mirahen(); return false"></button>
+<button id="hen4" class="button" onmouseover="description('mirav1')" onMouseOut="back()"><img src="css/mira.png"  onclick="load_exploit_mirav1(); return false"></button> 
+<button id="hen5" class="button" onmouseover="description('mirav2')" onMouseOut="back()"><img src="css/mira.png"  onclick="load_exploit_mirav2(); return false"></button> 
+<br>
+<button id="ce303916" class="button" onmouseover="description('ce303916')" onMouseOut="back()"><img src="css/ce303916.png" onclick="load_exploit_ce303916(); return false"></button>
+<button id="FW Spoof To 8.02" class="button" onmouseover="description('FW Spoof To 8.02')" onMouseOut="back()"><img src="css/fw.png" onclick="load_exploit_spoofer(); return false"></button>
+<button id="app2usb" class="button" onmouseover="description('app2usb')" onMouseOut="back()"><img src="css/app2usb.png" onclick="load_exploit_app2usb(); return false"></button>
+<button id="binloader" class="button" onmouseover="description('binloader')" onMouseOut="back()"><img src="css/binloader.png" onclick="load_exploit_binloader(); return false"></button>
+<button id="enableupdates" class="button" onmouseover="description('enableupdates')" onMouseOut="back()"><img src="css/enableupdate.png" onclick="load_exploit_enableupdates(); return false"></button>
+<button id="disableupdates" class="button" onmouseover="description('disableupdates')" onMouseOut="back()"><img src="css/disableupdate.png" onclick="load_exploit_disableupdates(); return false"></button>
+<button id="linux" onmouseover="description('linux1')" onMouseOut="back()"><img src="css/linux.png"  onclick="load_exploit_linux1(); return false"></button>
+<button id="linux2" onmouseover="description('linux2')" onMouseOut="back()"><img src="css/linux.png"  onclick="load_exploit_linux2(); return false"></button>
+<button id="linux3" onmouseover="description('linux3')" onMouseOut="back()"><img src="css/linux.png"  onclick="load_exploit_linux3(); return false"></button>
+<button id="dbbackup" onmouseover="description('dbbackup')" onMouseOut="back()"><img src="css/dbbackup.png"  onclick="load_exploit_dbbackup(); return false"></button>
+<button id="dbrestore" onmouseover="description('dbrestore')" onMouseOut="back()"><img src="css/dbrestore.png"  onclick="load_exploit_dbrestore(); return false"></button>
+<button id="dumper" onmouseover="description('dumper')" onMouseOut="back()"><img src="css/dumper.png"  onclick="load_exploit_dumper(); return false"></button>
+<button id="ftp" onmouseover="description('ftp')" onMouseOut="back()"><img src="css/ftp.png"  onclick="load_exploit_ftp(); return false"></button>
+<button id="debug" onmouseover="description('debug')" onMouseOut="back()"><img src="css/debug.png"  onclick="load_exploit_debug(); return false"></button>
+<button id="todex" onmouseover="description('todex')" onMouseOut="back()"><img src="css/todex.png"  onclick="load_exploit_todex(); return false"></button>
+<button id="vr" onmouseover="description('vr')" onMouseOut="back()"><img src="css/vr.png"  onclick="load_exploit_vr(); return false"></button>
+<button id="webrte" onmouseover="description('webrte')" onMouseOut="back()"><img src="css/webrte.png"  onclick="load_exploit_webrte(); return false"></button>
+<button id="fan" onmouseover="description('fan')" onMouseOut="back()"><img src="css/fan.png"  onclick="load_exploit_fan(); return false"></button><select id="tempC"style="font-size:20px;height:35px;width:60px;background-color:transparent;color:red;border:2px solid #404040;"></select>
+<br>
+<button id="arabicGuy100" onmouseover="description('arabicGuy100')" onMouseOut="back()"><img src="css/gtav.png"  onclick="load_exploit_arabicGuy100(); return false"></button>
+<button id="arabicGuy127" onmouseover="description('arabicGuy127')" onMouseOut="back()"><img src="css/gtav.png"  onclick="load_exploit_arabicGuy127(); return false"></button>
+<button id="arabicGuy132" onmouseover="description('arabicGuy132')" onMouseOut="back()"><img src="css/gtav.png"  onclick="load_exploit_arabicGuy132(); return false"></button>
+
+<button id="enableBrowser" onmouseover="description('enableBrowser')" onMouseOut="back()"><img src="css/enableBrowser.png"  onclick="load_exploit_enableBrowser(); return false"></button>
+<button id="historyBlocker" onmouseover="description('historyBlocker')" onMouseOut="back()"><img src="css/historyBlocker.png"  onclick="load_exploit_historyBlocker(); return false"></button>
+<button id="kernelDumper" onmouseover="description('kernelDumper')" onMouseOut="back()"><img src="css/kernelDumper.png"  onclick="load_exploit_kernelDumper(); return false"></button>
+<button id="kernelClock" onmouseover="description('kernelClock')" onMouseOut="back()"><img src="css/kernelClock.png"  onclick="load_exploit_kernelClock(); return false"></button>
+
+
+<h1 style="text-align:center;font-size:20px;color:white;text-shadow: 4px 4px 4px blue">Credits - Sleirgoevy - theflow - Team Synacktiv - And Many More</h1>
+<h1 style="text-align:center;font-size:16px;color:white;text-shadow: 4px 4px 4px blue">@Prb Darksoftware.net @Prb gbatemp.net</h1>
+
+<script>
+for(var i=40; i<=73; i++){
+    var select = document.getElementById("tempC");
+    var option = document.createElement("OPTION");
+	select.options.add(option);
+	option.text = i;
+	option.value = i;
+}
+tempC.value=60;
+</script>
+<script>
+
+function description (tip) {
+switch (tip) {
+case 'Auto Hen':document.getElementById("msgs").innerHTML = "Turn Auto Jailbreak & Hen v2.1.3 ON & Off";break;
+case 'hen213':document.getElementById("msgs").innerHTML = "Jailbreak + HEN v2.1.3";break;
+case 'Mira':document.getElementById("msgs").innerHTML = "Jailbreak + Mira";break;
+case 'Mira+hen':document.getElementById("msgs").innerHTML = "Jailbreak + Mira&Hen";break;
+case 'mirav1':document.getElementById("msgs").innerHTML = "Jailbreak - Mira - ToDex - Spoof fw8.03 - Fix v1";break;
+case 'mirav2':document.getElementById("msgs").innerHTML = "Jailbreak - Mira - ToDex - Spoof fw8.03 - Fix v2";break;
+case 'ce303916':document.getElementById("msgs").innerHTML = "CE-30391-6 error fix use this payload if you have this error ";;break;
+case 'FW Spoof To 8.02':document.getElementById("msgs").innerHTML = "FW Spoof To 8.02";break;
+case 'app2usb':document.getElementById("msgs").innerHTML = "APP2USB";break;
+case 'binloader':document.getElementById("msgs").innerHTML = "BinLoader ChendoChap";break;
+case 'disableupdates':document.getElementById("msgs").innerHTML = "Disable Updates";break;
+case 'enableupdates':document.getElementById("msgs").innerHTML = "Enable Updates";break;
+case 'linux1':document.getElementById("msgs").innerHTML = "Linux via USB 1gb";break;
+case 'linux2':document.getElementById("msgs").innerHTML = "Linux via USB 2gb";break;
+case 'linux3':document.getElementById("msgs").innerHTML = "Linux via USB 3gb";break;
+case 'dbbackup':document.getElementById("msgs").innerHTML = "DB Backup";break;
+case 'dbrestore':document.getElementById("msgs").innerHTML = "DB Restore";break;
+case 'dumper':document.getElementById("msgs").innerHTML = "Dumper";break;
+case 'ftp':document.getElementById("msgs").innerHTML = "FTP";break;
+case 'debug':document.getElementById("msgs").innerHTML = "PS4Debug";break;
+case 'todex':document.getElementById("msgs").innerHTML = "Todex";break;
+case 'vr':document.getElementById("msgs").innerHTML = "Enable VR";break;
+case 'webrte':document.getElementById("msgs").innerHTML = "WebRTE";break;
+case 'fan':document.getElementById("msgs").innerHTML = "Set Fan Treshold  The PS4's default temp is 79°C";break;
+case 'arabicGuy100':document.getElementById("msgs").innerHTML = "GTA V Mod Arabic Guy v1.00";;break;
+case 'arabicGuy127':document.getElementById("msgs").innerHTML = "GTA V Mod Arabic Guy v1.27";;break;
+case 'arabicGuy132':document.getElementById("msgs").innerHTML = "GTA V Mod Arabic Guy v1.32";;break;
+case 'enableBrowser':document.getElementById("msgs").innerHTML = "Enable Browser";break;
+case 'historyBlocker':document.getElementById("msgs").innerHTML = "History Blocker";break;
+case 'kernelDumper':document.getElementById("msgs").innerHTML = "Kernel Dumper";break;
+case 'kernelClock':document.getElementById("msgs").innerHTML = "Kernel Clock";break;
+
+default:document.getElementById("msgs").innerHTML = "error";
+  }
+}
+
+function back(){
+document.getElementById("msgs").innerHTML = "<font style=font-size:39px;color:white;text-shadow: 4px 4px 4px blue;'>Prb 7.02</font>";
+}	
+
+function check() {
+var checkStatus = document.getElementById("auto").checked;
+document.getElementById("auto").checked = checkStatus;
+localStorage.setItem('auto', checkStatus);
+
+if(checkStatus){
+document.getElementById("msgs").innerHTML = "Auto Hen On";}
+else{
+document.getElementById("msgs").innerHTML = "Auto Hen Off";}
+}
+
+var checkStatusStorage = localStorage.getItem("auto");
+	
+function Check(){
+if (checkStatusStorage == 'true'){
+document.getElementById("auto").checked = true ; 
+document.getElementById('hen1').style.display = 'none';
+document.getElementById('hen2').style.display = 'none';
+document.getElementById('hen3').style.display = 'none';
+document.getElementById('hen4').style.display = 'none';
+document.getElementById('hen5').style.display = 'none';
+}
+else{
+document.getElementById("auto").checked = false ;
+document.getElementById('hen1').style.display = 'inline';
+document.getElementById('hen2').style.display = 'inline';
+document.getElementById('hen3').style.display = 'inline';
+document.getElementById('hen4').style.display = 'inline';
+document.getElementById('hen5').style.display = 'inline';}
+}
+
+function returning(){
+    var retorno = decodeURIComponent(document.location.hash.substr(3));
+	if (retorno){
+		document.getElementById("msgs").innerHTML = "Press the circle button to exit the browser.";
+		var elementos = document.querySelectorAll(".invisible");	
+		elementos[1].style.display = 'none';	   
+		elementos[3].style.display = 'none';
+		var url = window.location.pathname
+		window.history.replaceState(null, null, url);					
+	}else{if (checkStatusStorage == 'true'){load_exploit_HEN(); return false;}}
+}
+
+//PAYLOADS
+function load_exploit_HEN(){window.location.replace("payloads/payload702.html#f=ps4henvtx702.js");}
+function load_exploit_mira2(){window.location.replace("payloads/payload702.html#f=mira2.js");}
+function load_exploit_mirahen(){window.location.replace("payloads/payload702.html#f=mirahen.js");}
+function load_exploit_mirav1(){window.location.replace("payloads/payload702.html#f=mirav1.js");}
+function load_exploit_mirav2(){window.location.replace("payloads/payload702.html#f=mirav2.js");}
+function load_exploit_ce303916(){window.location.replace("payloads/payload702.html#f=ce303916.js");}
+function load_exploit_spoofer(){window.location.replace("payloads/payload702.html#f=spoofer.js");}
+function load_exploit_app2usb(){window.location.replace("payloads/payload702.html#f=app2usb.js");}
+function load_exploit_binloader(){window.location.replace("payloads/binLoader.html");}
+function load_exploit_enableupdates(){window.location.replace("payloads/payload702.html#f=enableupdates.js");}
+function load_exploit_disableupdates(){window.location.replace("payloads/payload702.html#f=disableupdates.js");}
+function load_exploit_linux1(){window.location.replace("payloads/payload702.html#f=linux1.js");}
+function load_exploit_linux2(){window.location.replace("payloads/payload702.html#f=linux2.js");}
+function load_exploit_linux3(){window.location.replace("payloads/payload702.html#f=linux3.js");}
+function load_exploit_dbBackup(){window.location.replace("payloads/payload702.html#f=backup.js");}
+function load_exploit_dbRespore(){window.location.replace("payloads/payload702.html#f=restore.js");}
+function load_exploit_dumper(){window.location.replace("payloads/payload702.html#f=dumper.js");}
+function load_exploit_ftp(){window.location.replace("payloads/payload702.html#f=ftp.js");}
+function load_exploit_debug(){window.location.replace("payloads7/debug.html");}
+function load_exploit_todex(){window.location.replace("payloads/payload702.html#f=todex.js");}
+function load_exploit_vr(){window.location.replace("payloads/payload702.html#f=vr.js");}
+function load_exploit_webrte(){window.location.replace("payloads/webrte.html");}
+function load_exploit_fan(){window.location.replace("payloads/payload702.html#f=fanthreshold.js");}
+function load_exploit_arabicGuy100(){window.location.replace("payloads/payload702.html#f=arabicGuy100.js");}
+function load_exploit_arabicGuy127(){window.location.replace("payloads/payload702.html#f=arabicGuy127.js");}
+function load_exploit_arabicGuy132(){window.location.replace("payloads/payload702.html#f=arabicGuy132.js");}
+function load_exploit_kernelClock(){window.location.replace("payloads/payload702.html#f=kernelClock.js");}
+function load_exploit_kernelDumper(){window.location.replace("payloads/payload702.html#f=kernelDumper.js");}
+function load_exploit_historyBlocker(){window.location.replace("payloads/payload702.html#f=historyBlocker.js");}
+function load_exploit_enableBrowser(){window.location.replace("payloads/payload702.html#f=enableBrowser.js");}
+
+</script>
+</body>
+</html>
